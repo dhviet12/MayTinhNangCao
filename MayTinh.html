@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        button { width: 100px;
+            height: 40px;
+            margin: 4px;
+            font-size: 30px;
+        }
+        input {
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            font-size: 40px;
+        }
+        div { width: 600px;
+        border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+<div>
+<input type="text" id="result" value="0">
+<button onclick="nutbam(1)">1</button>
+<button onclick="nutbam(2)">2</button>
+<button onclick="nutbam(3)">3</button>
+<button onclick="nutbam(4)">4</button>
+<button onclick="nutbam(5)">5</button>
+<button onclick="nutbam(6)">6</button>
+<button onclick="nutbam(7)">7</button>
+<button onclick="nutbam(8)">8</button>
+<button onclick="nutbam(9)">9</button>
+<button onclick="nutbam(0)">0</button>
+<button onclick="nutbam('+')">+</button>
+<button onclick="nutbam('-')">-</button>
+<button onclick="nutbam('*')">x</button>
+<button onclick="nutbam('/')">/</button>
+<button onclick="calculate()">=</button>
+<button onclick="nutAC()">C</button>
+
+</div>
+
+<script>
+    let output = document.getElementById("result");
+    function nutbam (giatri) {
+        if (output.value == 0)
+        {output.value = giatri;}
+        else
+        {output.value += giatri;}
+    }
+    function nutAC() {
+        output.value = 0;
+    }
+    function calculate() {
+        output.value = eval(output.value);
+    }
+
+
+
+</script>
+</body>
+</html>
